@@ -2,14 +2,8 @@ const mongoose = require("mongoose");
 
 module.exports = async () => {
     try {
-        const parameters = {
-            useCreateIndex: true,
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        };
         await mongoose.connect(
-            "mongodb://localhost/todo",
-            parameters
+            "mongodb://localhost/todo"
         );
         console.log("Database connection done successfully!");
     } catch (error) {
