@@ -1,11 +1,8 @@
 import React from "react";
 import TodoClass from "./todoComponent";
-import { TextField } from "@material-ui/core";
-import { Checkbox, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import "./App.css";
-import {FaPlus} from "react-icons/fa";
-import {FaTrashAlt} from "react-icons/fa";
-import {FaTasks} from "react-icons/fa";
+import { FaPlus,FaTrashAlt,FaTasks,FaExclamation } from "react-icons/fa";
 class App extends TodoClass {
   state = { todolist: [], presentTodo: "" };
   render() {
@@ -15,7 +12,7 @@ class App extends TodoClass {
       <center>
         <div className="todo">
           <div className="container">
-            <center className="heading"><h2><FaTasks size={55}/> TO DO !</h2></center>
+            <center className="heading"><h2><FaTasks size={55} color="red"/> TO DO <FaExclamation size={55} color="red"/></h2></center>
             <form
               onSubmit={this.submit}
               className="flex"
@@ -26,14 +23,14 @@ class App extends TodoClass {
                 value={this.state.presentTodo}
                 required={true}
                 onChange={this.change}
-                placeholder="  Add New TO-DO"
+                placeholder="Add New TO-DO"
               />
               <Button
                 class="btn"
                 variant="outlined"
                 type="submit"
               >
-                 <FaPlus/>
+                <FaPlus color="red"/>
               </Button>
             </form>
             <div>
@@ -44,10 +41,10 @@ class App extends TodoClass {
                   style={{ width: "83%" }}
 
                 >
-                  <Checkbox
+                  <input type="checkbox"
+                    className="check"
                     checked={todo.completed}
                     onClick={() => this.update(todo._id)}
-                    color="primary"
                   />
                   <div
                     className={
@@ -60,7 +57,7 @@ class App extends TodoClass {
                     onClick={() => this.delete(todo._id)}
                     class="delete "
                   >
-                    <FaTrashAlt/>
+                    <FaTrashAlt size={20} />
                   </Button>
                 </div>
               ))}

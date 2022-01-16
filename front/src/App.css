@@ -1,81 +1,84 @@
-.todo {
-    width: 100vw;
-    height: 100vh;
-    background: rgb(34, 193, 195);
-    background: linear-gradient(0deg, rgb(98, 246, 248) 0%, rgb(247, 206, 119) 100%);
+body {
+  background: rgb(2, 2, 2);
+  color: rgb(255, 255, 255);
+  background-attachment: fixed;
 }
 
 .heading {
-    font-size: 50px;
-    font-weight: 900;
-    font-weight: bold;
-    /* line-height: 50px; */
-    color: black;
+  font-size: 50px;
+  font-weight: 900;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
 
 .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    width: 700px;
-    min-height: 300px;
-    padding: 10px;
+  width: 700px;
+  min-width: 500px;
+  padding: 10px;
 }
 
 .todoitem {
-    text-align: left;
-    background-color: white;
-    border: white;
-    font-family: Montserrat;
-    font-weight: 500;
-    height: 50px;
-    width: 70%;
-    border-radius: 10px;
-    margin-right: 20px;
-    
+  text-align: left;
+  background-color: white;
+  border: white;
+  color: red;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 500;
+  height: 50px;
+  width: 70%;
+  border-radius: 10px;
+  margin-right: 20px;
 }
-input:focus{
-    border: white;
+input:focus {
+  color: red;
 }
 
 .delete {
-    background-color: red;
-    color: white;
-    
-    height: 50px;
-    width: 50px;
-    border: none;
-    border-radius: 10px;
+  background-color: red;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+}
+.check {
+  height: 30px;
+  width: 30px;
+  background-color: yellow;
 }
 
 .btn {
-    border: none;
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    margin-left: 10px;
-    font-size: 17px;
-    background-color: white;
-    /* color: white; */
+  border: rgb(255, 255, 255);
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 17px;
+  background-color: white;
 }
 
 .task_container {
-    font-size: 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    color: black;
-    text-align: left;
+  font-size: 25px;
+  margin: 10px 0;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  text-align: left;
 }
 
 .task {
-    flex-grow: 1;
-    margin-left: 10px;
+  flex-grow: 1;
+  margin-left: 10px;
 }
 
 .line_through {
-    text-decoration: line-through;
-    color: red;
+  text-decoration: line-through;
+  color: red;
 }
