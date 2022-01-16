@@ -3,7 +3,9 @@ import TodoClass from "./todoComponent";
 import { TextField } from "@material-ui/core";
 import { Checkbox, Button } from "@material-ui/core";
 import "./App.css";
-
+import {FaPlus} from "react-icons/fa";
+import {FaTrashAlt} from "react-icons/fa";
+import {FaTasks} from "react-icons/fa";
 class App extends TodoClass {
   state = { todolist: [], presentTodo: "" };
   render() {
@@ -13,27 +15,25 @@ class App extends TodoClass {
       <center>
         <div className="todo">
           <div className="container">
-            <center className="heading"><h1> TO DO </h1></center>
+            <center className="heading"><h2><FaTasks size={55}/> TO DO !</h2></center>
             <form
               onSubmit={this.submit}
               className="flex"
               style={{ margin: "15px 0" }}
             >
-              <TextField
+              <input
                 className="todoitem"
-                variant="outlined"
-                style={{ width: "75%" }}
                 value={this.state.presentTodo}
                 required={true}
                 onChange={this.change}
-                placeholder="Add New TO-DO"
+                placeholder="  Add New TO-DO"
               />
               <Button
                 class="btn"
-                // variant="outlined"
+                variant="outlined"
                 type="submit"
               >
-                Add task
+                 <FaPlus/>
               </Button>
             </form>
             <div>
@@ -41,7 +41,7 @@ class App extends TodoClass {
                 <div
                   key={todo._id}
                   className="flex task_container"
-                  style={{ width: "90%" }}
+                  style={{ width: "83%" }}
 
                 >
                   <Checkbox
@@ -60,7 +60,7 @@ class App extends TodoClass {
                     onClick={() => this.delete(todo._id)}
                     class="delete "
                   >
-                    DELETE
+                    <FaTrashAlt/>
                   </Button>
                 </div>
               ))}
