@@ -2,7 +2,7 @@ import React from "react";
 import TodoClass from "./todoComponent";
 import { Button } from "@material-ui/core";
 import "./App.css";
-import { FaPlus,FaTrashAlt,FaTasks,FaExclamation } from "react-icons/fa";
+import { FaPlus, FaTrashAlt, FaTasks, FaExclamation } from "react-icons/fa";
 class App extends TodoClass {
   state = { todolist: [], presentTodo: "" };
   render() {
@@ -12,7 +12,7 @@ class App extends TodoClass {
       <center>
         <div className="todo">
           <div className="container">
-            <center className="heading"><h2><FaTasks size={55} color="red"/> TO DO <FaExclamation size={55} color="red"/></h2></center>
+            <center className="heading"><h2><FaTasks size={55} color="red" /> TO DO <FaExclamation size={55} color="red" /></h2></center>
             <form
               onSubmit={this.submit}
               className="flex"
@@ -30,7 +30,7 @@ class App extends TodoClass {
                 variant="outlined"
                 type="submit"
               >
-                <FaPlus color="red"/>
+                <FaPlus color="red" />
               </Button>
             </form>
             <div>
