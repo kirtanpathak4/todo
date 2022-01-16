@@ -34,5 +34,17 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
+router.put("/:id", async (req, res) => {
+    try {
+        const updateTodo = await Model.findOneAndUpdate(
+            { _id: req.params.id },
+            req.body
+        );
+        res.send(updateTodo);
+    } catch (error) {
+        res.send(error);
+    }
+});
+
 
 module.exports = router;
